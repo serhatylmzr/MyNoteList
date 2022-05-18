@@ -1,0 +1,144 @@
+{
+    "main": {
+        "appTitle": "MY NOTE LIST"
+    },
+    "onboardPage": {
+        "page1": {
+            "title": "Add and edit your note ",
+            "description": "You can easily add your notes with the easy-to-use interface. You can change the background theme. You can include your note in the category."
+        },
+        "page2": {
+            "title": " Simple note list",
+            "description": "You can easily find notes from the search box. You can delete the note you want by swiping right. You can change the list view."
+        },
+        "page3": {
+            "title": "Dark theme and language support",
+            "description": "You can change the theme option of the application by going to the Settings section. You can change the application language."
+        }
+    },
+    "searchBar": {
+        "searchInput": "Suche aus Notizen.."
+    },
+    "notes": {
+        "note": {
+            "note_title": "Titel",
+            "note_content": "Schreiben Sie Ihre Notiz..",
+            "note_priority": "Note priority",
+            "date": "Date",
+            "add_note": "Notiz Hinzufügen",
+            "add_new_note": "Neue Notiz hinzufügen"
+        },
+        "category": {
+            "category": "Kategorie",
+            "category_title": "Category Title",
+            "select_category": "Kategorie Wählen",
+            "personal": "Persönlich",
+            "school": "Schule",
+            "work": "Arbeit",
+            "withFriends": "Mit Freunden",
+            "errands": "Besorgungen",
+            "no_list": "Keine Liste"
+        },
+        "priorty": {
+            "low": "Low",
+            "high": "High",
+            "urgent": "Urgent"
+        }
+    },
+    "buttons": {
+        "add": "Add",
+        "save": "Save",
+        "delete": "Delete",
+        "update": "Update",
+        "cancel": "Cancel",
+        "ok": "Ok",
+        "yes": "Yes",
+        "no": "No",
+        "submit": "Submit",
+        "accept": "Accept"
+    },
+    "profilePage": {
+        "settings": "Settings",
+        "account": {
+            "title": "Account Settings",
+            "editProfile": "Edit Profile"
+        },
+        "notification": {
+            "title": "Turn On Notifications",
+            "hintText": "We will notify about new recommendations"
+        },
+        "about": {
+            "title": "About",
+            "title2": "About Us",
+            "followUs": "Follow Us"
+        },
+        "language": {
+            "title": "Sprache",
+            "hintText": "Wähle deine Sprache",
+            "english": "Englisch",
+            "turkish": "Türkisch",
+            "german": "Deutsch",
+            "spanish": "Spanisch",
+            "french": "Französisch"
+        },
+        "theme": {
+            "title": "Theme",
+            "hintText": "You can change theme",
+            "title_dark": "Dunkles Thema"
+        },
+        "help": {
+            "title": "Help"
+        },
+        "helpCenter": {
+            "title": "Hilfezentrum"
+        },
+        "applicationTour": {
+            "title": "Application Tour"
+        },
+        "privacyPolicy": {
+            "title": "Datenschutz-Bestimmungen"
+        },
+        "collaboration": {
+            "title": "Zusammenarbeit"
+        },
+        "logOut": "Log Out"
+    },
+    "validator": {
+        "email": "Enter valid E-mail",
+        "password": "Password must be more than 6 charachters.",
+        "confirmpassword": "Password is not match!",
+        "nameAndSurname": "This section cannot be empty."
+    },
+    "dialogTitles": {
+        "delete": "Delete",
+        "logOut": "Log Out",
+        "error": {
+            "tryAgain": "Try Again ",
+            "emailAlreadyUse": "Email Already Use In",
+            "userNotFound": "User Not Found",
+            "accountExistsWithDifferentCredential": "Account Exists With Different Credential",
+            "passwordWrong": "Wrong Password",
+            "error": "Error"
+        }
+    },
+    "dialogContents": {
+        "delete": "Are you sure that you want to delete it?",
+        "logOut": "Are you sure that you want to logout?",
+        "error": {
+            "tryAgain": "Please, try again later.",
+            "emailAlreadyUse": "This e-mail address is already in use, please use a different e-mail!",
+            "userNotFound": "No such user found, please try a valid e-mail address!",
+            "accountExistsWithDifferentCredential": "Account exists with different credential. Please login with this e-mail address.",
+            "passwordWrong": "Your password is wrong, Please enter the password again",
+            "error": "Something went wrong"
+        }
+    },
+    "dialogButtons": {
+        "ok": "Ok",
+        "yes": "Yes",
+        "no": "No",
+        "accept": "Accept",
+        "cancel": "Cancel",
+        "submit": "Submit"
+    }
+}

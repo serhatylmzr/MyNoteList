@@ -1,0 +1,144 @@
+{
+    "main": {
+        "appTitle": "MYWL"
+    },
+    "onboardPage": {
+        "page1": {
+            "title": "Notunuzu ekleyin ve düzenleyin ",
+            "description": "Kullanımı kolay arayüz ile rahatça notlarınızı ekleyebilirsiniz. Arka plan  temasını değiştirebilirsiniz.Notunuzu kategoriye dahil edebilirsiniz"
+        },
+        "page2": {
+            "title": " Kullanışlı not listesi",
+            "description": "Eklediğiniz notları arama kutusundan rahatça bulabilirsiniz. Sağa kaydırarak istediğiniz notu silebilirsiniz. Liste görünümünü değiştirebilirsiniz."
+        },
+        "page3": {
+            "title": "Koyu tema ve dil desteği",
+            "description": "Ayarlar bölümüne giderek uygulamanın tema seçeneğini değiştirebilirsiniz. Uygulama dilini değiştirebilirsiniz."
+        }
+    },
+    "searchBar": {
+        "searchInput": "Notlarda arayın.."
+    },
+    "notes": {
+        "note": {
+            "note_title": "Başlık",
+            "note_content": "Notunuzu yazın..",
+            "note_priority": "Öncelik",
+            "date": "Tarih",
+            "add_note": "Not Ekle",
+            "add_new_note": "Yeni Not Ekleyin"
+        },
+        "category": {
+            "category": "Kategori",
+            "category_title": "Kategori Başlığı",
+            "select_category": "Kategori Seç",
+            "personal": "Kişisel",
+            "school": "Okul",
+            "work": "İş",
+            "withFriends": "Arkadaşlarla",
+            "errands": "Ayak İşleri",
+            "no_list": "Genel"
+        },
+        "priorty": {
+            "low": "Düşük",
+            "high": "Yüksek",
+            "urgent": "Acil"
+        }
+    },
+    "buttons": {
+        "add": "Ekle",
+        "save": "Kaydet",
+        "delete": "Sil",
+        "update": "Güncelle",
+        "cancel": "Vazgeç",
+        "ok": "Tamam",
+        "yes": "Evet",
+        "no": "Hayır",
+        "submit": "Gönder",
+        "accept": "Kabul Et"
+    },
+    "profilePage": {
+        "settings": "Ayarlar",
+        "account": {
+            "title": "Hesap Ayarları",
+            "editProfile": "Profili Düzenle"
+        },
+        "notification": {
+            "title": "Turn On Notifications",
+            "hintText": "Yeni öneriler hakkında bilgilendireceğiz"
+        },
+        "about": {
+            "title": "Hakkında",
+            "title2": "Hakkımızda",
+            "followUs": "Bizi Takip Edin"
+        },
+        "language": {
+            "title": "Dil Seçenekleri",
+            "hintText": "Dilinizi seçiniz",
+            "english": "İngilizce",
+            "turkish": "Türkçe",
+            "german": "Almanca",
+            "spanish": "İspanyolca",
+            "french": "Fransızca"
+        },
+        "theme": {
+            "title": "Tema Ayarları",
+            "hintText": "Tema değişikliği yapabilirsiniz",
+            "title_dark": "Koyu Tema"
+        },
+        "applicationTour": {
+            "title": "Uygulama Turu"
+        },
+        "help": {
+            "title": "Yardım"
+        },
+        "helpCenter": {
+            "title": "Yardım Merkezi"
+        },
+        "privacyPolicy": {
+            "title": "Gizlilik Politikası"
+        },
+        "collaboration": {
+            "title": "İş Birliği"
+        },
+        "logOut": "Çıkış Yap"
+    },
+    "validator": {
+        "email": "Geçerli e-posta girin",
+        "password": "Şifre 6 karakterden fazla olmalıdır.",
+        "confirmpassword": "Parola Eşleşmiyor!",
+        "nameAndSurname": "Bu bölüm boş olamaz."
+    },
+    "dialogTitles": {
+        "delete": "Delete",
+        "logOut": "Log Out",
+        "error": {
+            "tryAgain": "Try Again ",
+            "emailAlreadyUse": "Email Already Use In",
+            "userNotFound": "User Not Found",
+            "accountExistsWithDifferentCredential": "Account Exists With Different Credential",
+            "passwordWrong": "Wrong Password",
+            "error": "Error"
+        }
+    },
+    "dialogContents": {
+        "delete": "Are you sure that you want to delete it?",
+        "logOut": "Are you sure that you want to logout?",
+        "error": {
+            "tryAgain": "Please, try again later.",
+            "emailAlreadyUse": "This e-mail address is already in use, please use a different e-mail!",
+            "userNotFound": "No such user found, please try a valid e-mail address!",
+            "accountExistsWithDifferentCredential": "Account exists with different credential. Please login with this e-mail address.",
+            "passwordWrong": "Your password is wrong, Please enter the password again",
+            "error": "Something went wrong"
+        }
+    },
+    "dialogButtons": {
+        "ok": "Tamam",
+        "yes": "Evet",
+        "no": "Hayır",
+        "accept": "Kabul et",
+        "cancel": "İptal",
+        "submit": "Onayla"
+    }
+}
