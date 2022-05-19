@@ -64,9 +64,6 @@ ListView _buildListView(BuildContext context, SettingViewModel _viewModel) {
 
 ListTile _buildPrivacy(BuildContext context) {
   return ListTile(
-    onTap: () {
-      showLicensePage(context: context);
-    },
     leading: const Icon(Icons.privacy_tip),
     title: _buildTitle(context, LocaleKeys.profilePage_privacyPolicy_title),
   );
