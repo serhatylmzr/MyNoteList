@@ -4,15 +4,23 @@
 
 A simple notes taking app written in Flutter that uses hive for storage.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+<p>
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/list_view.png" alt="List View" width="250">
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/grid_view.png" alt="Grid View" width="250">
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/add_note_page.png" alt="Add Note Page" width="250">
 
-A few resources to get you started if this is your first Flutter project:
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<p>
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/search.png" alt="Search" width="250">
+   <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/setting_drawer_dark.png" alt="Setting View" width="250">
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/add_note_page_dark.png" alt="Add Note Page Dark" width="250">
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/language_popup_light.png" alt="Language Popup" width="250">
+   <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/splash_screen.png" alt="Splash" width="250">
+  <img src="https://github.com/serhatylmzr/MyNoteList/blob/main/screenshots/onboard_page.png" alt="Onboard" width="250">
+</p>
