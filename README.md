@@ -4,7 +4,7 @@
 
 A simple notes taking app written in Flutter that uses hive for storage.
 
-##Features
+## Features
 <ul>
   <li>Architecture(MVVM)</li>
   <li>Storage(Hive)</li>
