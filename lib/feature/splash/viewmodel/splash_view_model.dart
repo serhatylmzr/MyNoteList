@@ -31,7 +31,7 @@ class SplashViewModel extends BaseViewModel {
     settingCubit.changeLang(context.locale);
     SettingCacheManager _cacheManager = SettingCacheManager();
     final bool initFirstApp = await _cacheManager.getInit();
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(seconds: 1));
     if (initFirstApp == true) {
       navigateToHome();
     } else {

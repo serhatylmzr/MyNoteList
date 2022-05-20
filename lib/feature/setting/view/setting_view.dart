@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:simple_note_app/product/init/lang/language_extension.dart';
+import 'package:mynotelist/product/init/lang/language_extension.dart';
 import '../../../product/constants/app_constants.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../cubit/setting_cubit.dart';

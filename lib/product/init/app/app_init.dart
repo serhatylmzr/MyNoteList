@@ -5,7 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class AppInitialize {
   Future<void> initBeforeAppStart() async {
-    Hive.initFlutter();
+    await Hive.initFlutter();
     WidgetsFlutterBinding.ensureInitialized();
     await EasyLocalization.ensureInitialized();
     _closeLocalization();

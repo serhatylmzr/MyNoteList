@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:simple_note_app/core/init/lang/language_manager.dart';
+import 'package:mynotelist/core/init/lang/language_manager.dart';
 
 void main() {
   setUp(() {

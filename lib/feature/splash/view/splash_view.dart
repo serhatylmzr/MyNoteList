@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import '../../../core/extensions/context_extension.dart';
-import '../viewmodel/splash_view_model.dart';
-import '../../../product/constants/app_constants.dart';
+
 import '../../../core/base/view/base_view.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../product/constants/app_constants.dart';
+import '../viewmodel/splash_view_model.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);

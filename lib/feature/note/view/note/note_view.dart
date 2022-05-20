@@ -64,8 +64,8 @@ class NoteView extends StatelessWidget {
           children: [
             SizedBox(
               height: context.isKeyBoardOpen
-                  ? context.height * 0.73 - context.keyboardSize
-                  : context.height * 0.73,
+                  ? context.height * 0.71 - context.keyboardSize
+                  : context.height * 0.60,
               child: _NoteForm(
                 viewModel: _viewModel,
               ),
