@@ -1,6 +1,8 @@
-# simple_note_app
+<img align="left" width="120" height="120" src="https://github.com/serhatylmzr/MyNoteList/blob/main/assets/png/ic_launcher.png" alt="App Icon">
 
-A new Flutter project.
+# MyNoteList
+
+Simple note app 
 
 ## Getting Started
 
