@@ -1,4 +1,5 @@
 <img align="left" width="120" height="120" src="https://github.com/serhatylmzr/MyNoteList/blob/main/assets/png/ic_launcher.png" alt="App Icon">
+
 # MyNoteList
 
 Simple note app 
