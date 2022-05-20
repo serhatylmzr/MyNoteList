@@ -2,7 +2,7 @@
 
 # MyNoteList
 
-Simple note app 
+A simple notes taking app written in Flutter that uses hive for storage.
 
 ## Getting Started
 
