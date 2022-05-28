@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mynotelist/core/extensions/context_extension.dart';
+import '../../../core/extensions/context_extension.dart';
 
 void buildShowDialog(BuildContext context, Widget child) {
   const Color _barrierColor = Colors.black54;

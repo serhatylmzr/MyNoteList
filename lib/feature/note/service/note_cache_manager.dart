@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:mynotelist/core/extensions/string_extension.dart';
+import '../../../core/extensions/string_extension.dart';
 import '../../../product/constants/hive_constants.dart';
 import '../../../product/init/cache/cache_manager.dart';
 import '../model/category/category_model.dart';

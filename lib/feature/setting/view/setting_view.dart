@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mynotelist/product/init/lang/language_extension.dart';
+import '../../../product/init/lang/language_extension.dart';
 import '../../../product/constants/app_constants.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../../product/widget/dialog/show_dialog_button.dart';

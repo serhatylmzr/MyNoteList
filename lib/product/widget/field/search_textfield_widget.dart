@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mynotelist/core/extensions/context_extension.dart';
-import 'package:mynotelist/core/extensions/string_extension.dart';
+import '../../../core/extensions/context_extension.dart';
+import '../../../core/extensions/string_extension.dart';
 
 import '../../../feature/note/cubit/note_cubit.dart';
 import '../../init/lang/locale_keys.g.dart';

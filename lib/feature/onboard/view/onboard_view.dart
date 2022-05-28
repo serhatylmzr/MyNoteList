@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mynotelist/core/extensions/string_extension.dart';
+import '../../../core/extensions/string_extension.dart';
 import '../../../core/extensions/context_extension.dart';
 import '../../setting/cubit/setting_cubit.dart';
 import '../../../product/widget/text/locale_text.dart';

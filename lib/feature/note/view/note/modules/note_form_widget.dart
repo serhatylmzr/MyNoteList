@@ -23,20 +23,19 @@ class _NoteForm extends StatelessWidget {
 }
 
 TextFieldWidget _buildContentInput(
-        TextEditingController controller, int? color) =>
+        TextEditingController controller, int color) =>
     TextFieldWidget(
       controller: controller,
       hintText: LocaleKeys.notes_note_note_content.locale,
       maxLines: 20,
-      style: TextStyle(color: Color(color!)),
+      style: TextStyle(color: Color(color)),
       cursorColor: Color(color),
     );
 
-TextFieldWidget _buildTitleInput(
-        TextEditingController controller, int? color) =>
+TextFieldWidget _buildTitleInput(TextEditingController controller, int color) =>
     TextFieldWidget(
       controller: controller,
       hintText: LocaleKeys.notes_note_note_title.locale,
-      style: TextStyle(color: Color(color!)),
+      style: TextStyle(color: Color(color)),
       cursorColor: Color(color),
     );

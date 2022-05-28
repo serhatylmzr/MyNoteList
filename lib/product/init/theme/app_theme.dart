@@ -25,6 +25,9 @@ abstract class ThemeManager {
         ),
         canvasColor: theme.colors.canvasColor,
         iconTheme: IconThemeData(color: theme.colors.iconColor, size: 24),
+        textSelectionTheme: TextSelectionThemeData(
+            selectionColor: theme.colors.canvasColor,
+            selectionHandleColor: theme.colors.canvasColor),
         cardColor: theme.colors.cardColor,
         bottomAppBarColor: theme.colors.scaffoldBackgroundColor,
         brightness: theme.colors.colorScheme?.brightness,
