@@ -6,24 +6,18 @@ class _LanguageDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      alignment: Alignment.center,
-      backgroundColor: context.theme.cardColor,
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-      child: SizedBox(
-        height: context.dynamicHeight(0.3),
-        width: context.dynamicWidth(0.2),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _buildLanguageHeader(context),
-            Expanded(
-              child: _buildLanguageList(),
-            ),
-            context.emptySizedHeightBoxNormal,
-          ],
-        ),
+    return SizedBox(
+      height: context.dynamicHeight(0.3),
+      width: context.dynamicWidth(0.2),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _buildLanguageHeader(context),
+          Expanded(
+            child: _buildLanguageList(),
+          ),
+          context.emptySizedHeightBoxNormal,
+        ],
       ),
     );
   }

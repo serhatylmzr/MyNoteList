@@ -101,6 +101,9 @@
         "collaboration": {
             "title": "Collaboration"
         },
+        "licences": {
+            "title": "Licences"
+        },
         "logOut": "Log Out"
     },
     "validator": {
@@ -139,6 +142,7 @@
         "no": "No",
         "accept": "Accept",
         "cancel": "Cancel",
-        "submit": "Submit"
+        "submit": "Submit",
+        "close": "Close"
     }
 }

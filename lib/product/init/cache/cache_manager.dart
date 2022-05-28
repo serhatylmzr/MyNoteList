@@ -15,10 +15,9 @@ abstract class ICacheManager<T> {
   }
 
   void registerAdapters();
-  Future<void> addItem(T item);
+  Future<void> putItem(T item);
   List<T>? getValues();
-  Future<void> putAtItem(T item, int index);
-  Future<void> removeItem(int key);
+  Future<void> removeItem(String key);
   Future<void> clearAll() async {
     await _box?.clear();
   }

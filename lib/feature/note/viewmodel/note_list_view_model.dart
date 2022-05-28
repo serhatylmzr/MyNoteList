@@ -31,7 +31,7 @@ class NoteListViewModel extends BaseViewModel {
     await noteCubit.getNotes();
   }
 
-  Future<void> deleteNote(int key) async {
+  Future<void> deleteNote(String key) async {
     await noteCubit.deleteNote(key);
   }
 }

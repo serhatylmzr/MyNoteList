@@ -44,15 +44,9 @@ class NoteCubit extends Cubit<NoteState> {
     emit(state.copyWith(noteTheme: noteTheme));
   }
 
-  void addNote(NoteModel note) async {
+  void saveNote(NoteModel note) async {
     await _noteCacheManager.init();
-    await _noteCacheManager.addItem(note);
-    getNotes();
-  }
-
-  void updateNote(NoteModel note, int index) async {
-    await _noteCacheManager.init();
-    _noteCacheManager.putAtItem(note, index);
+    await _noteCacheManager.putItem(note);
     getNotes();
   }
 
@@ -77,7 +71,7 @@ class NoteCubit extends Cubit<NoteState> {
     }
   }
 
-  Future<void> deleteNote(int key) async {
+  Future<void> deleteNote(String key) async {
     _noteCacheManager.removeItem(key);
     emit(state.copyWith(noteList: _noteCacheManager.getValues()));
     //listenNoteList();

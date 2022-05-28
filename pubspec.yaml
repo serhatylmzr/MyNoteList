@@ -53,6 +53,7 @@ dependencies:
   flutter_svg: ^1.0.0
   auto_size_text: ^3.0.0
   flutter_staggered_grid_view: ^0.6.1
+  flutter_markdown: 
   #animation
   lottie: ^1.3.0
 
@@ -87,6 +88,7 @@ flutter:
     - assets/languages/
     - assets/svg/
     - assets/fonts/rubik/
+    - assets/privacy/
   # example:
   fonts:
     - family: Rubik

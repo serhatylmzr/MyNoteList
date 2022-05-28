@@ -2,12 +2,12 @@ part of 'note_cubit.dart';
 
 class NoteState extends Equatable {
   const NoteState({
-    this.noteList,
+    this.noteList = const [],
     this.isGrid = true,
     required this.noteTheme,
     required this.category,
   });
-  final List<NoteModel>? noteList;
+  final List<NoteModel> noteList;
   final bool isGrid;
   final NoteThemeModel noteTheme;
   final CategoryModel category;

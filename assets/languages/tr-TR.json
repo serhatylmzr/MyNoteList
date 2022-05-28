@@ -101,6 +101,9 @@
         "collaboration": {
             "title": "İş Birliği"
         },
+        "licences": {
+            "title": "Lisanslar"
+        },
         "logOut": "Çıkış Yap"
     },
     "validator": {
@@ -139,6 +142,7 @@
         "no": "Hayır",
         "accept": "Kabul et",
         "cancel": "İptal",
-        "submit": "Onayla"
+        "submit": "Onayla",
+        "close": "Kapat"
     }
 }

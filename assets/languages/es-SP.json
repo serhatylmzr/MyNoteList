@@ -93,13 +93,16 @@
             "title": "Centro de ayuda"
         },
         "applicationTour": {
-            "title": "Application Tour"
+            "title": "Recorrido de la aplicación"
         },
         "privacyPolicy": {
             "title": "Política de privacidad"
         },
         "collaboration": {
             "title": "Colaboración"
+        },
+        "licences": {
+            "title": "Licencias"
         },
         "logOut": "Log Out"
     },
@@ -139,6 +142,7 @@
         "no": "No",
         "accept": "Accept",
         "cancel": "Cancel",
-        "submit": "Submit"
+        "submit": "Submit",
+        "close": "Cerrar"
     }
 }

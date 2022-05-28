@@ -93,13 +93,16 @@
             "title": "Hilfezentrum"
         },
         "applicationTour": {
-            "title": "Application Tour"
+            "title": "Bewerbungstour"
         },
         "privacyPolicy": {
             "title": "Datenschutz-Bestimmungen"
         },
         "collaboration": {
             "title": "Zusammenarbeit"
+        },
+        "licences": {
+            "title": "Lizenzen"
         },
         "logOut": "Log Out"
     },
@@ -139,6 +142,7 @@
         "no": "No",
         "accept": "Accept",
         "cancel": "Cancel",
-        "submit": "Submit"
+        "submit": "Submit",
+        "close": "Schließen"
     }
 }

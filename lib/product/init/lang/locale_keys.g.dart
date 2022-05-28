@@ -90,6 +90,8 @@ abstract class LocaleKeys {
   static const profilePage_collaboration_title =
       'profilePage.collaboration.title';
   static const profilePage_collaboration = 'profilePage.collaboration';
+  static const profilePage_licences_title = 'profilePage.licences.title';
+  static const profilePage_licences = 'profilePage.licences';
   static const profilePage_logOut = 'profilePage.logOut';
   static const profilePage = 'profilePage';
   static const validator_email = 'validator.email';
@@ -131,5 +133,6 @@ abstract class LocaleKeys {
   static const dialogButtons_accept = 'dialogButtons.accept';
   static const dialogButtons_cancel = 'dialogButtons.cancel';
   static const dialogButtons_submit = 'dialogButtons.submit';
+  static const dialogButtons_close = 'dialogButtons.close';
   static const dialogButtons = 'dialogButtons';
 }

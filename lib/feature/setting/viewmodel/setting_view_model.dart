@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/base/model/base_view_model.dart';
 import '../../../core/init/lang/language_manager.dart';
+import '../../../product/init/navigation/navigation_enums.dart';
 import '../cubit/setting_cubit.dart';
 
 class SettingViewModel extends BaseViewModel {
@@ -15,7 +16,6 @@ class SettingViewModel extends BaseViewModel {
   }
 
   late final settingCubit = BlocProvider.of<SettingCubit>(context);
-
   void init() {
     locales = _languageManager.supportedLocales;
   }
@@ -26,6 +26,11 @@ class SettingViewModel extends BaseViewModel {
     context.setLocale(locale);
     settingCubit.changeLang(locale);
     Navigator.pop(context);
+  }
+
+  void navigateToOnboard() {
+    navigationManager.navigateToPageClear(
+        path: NavigationEnums.onboard.rawValue);
   }
 
   void changeTheme() {}

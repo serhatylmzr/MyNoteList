@@ -9,22 +9,25 @@ part 'note_model.g.dart';
 @HiveType(typeId: HiveConstants.noteTypeId)
 class NoteModel {
   @HiveField(0)
+  final String noteId;
+  @HiveField(1)
   final String title;
 
-  @HiveField(1)
+  @HiveField(2)
   final String body;
 
-  @HiveField(2)
+  @HiveField(3)
   final NoteThemeModel noteTheme;
 
-  @HiveField(3)
+  @HiveField(4)
   final CategoryModel category;
 
-  @HiveField(4)
+  @HiveField(5)
   final DateTime created;
 
   NoteModel(
-      {required this.title,
+      {required this.noteId,
+      required this.title,
       required this.body,
       required this.noteTheme,
       required this.category,

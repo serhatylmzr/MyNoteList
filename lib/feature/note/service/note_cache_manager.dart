@@ -1,4 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:mynotelist/core/extensions/string_extension.dart';
 import '../../../product/constants/hive_constants.dart';
 import '../../../product/init/cache/cache_manager.dart';
 import '../model/category/category_model.dart';
@@ -9,23 +10,21 @@ class NoteCacheManager extends ICacheManager<NoteModel> {
   NoteCacheManager(String key) : super(key);
 
   @override
-  Future<void> addItem(NoteModel item) async {
-    await box?.add(item);
+  Future<void> putItem(NoteModel item) async {
+    await box?.put(item.noteId, item);
   }
 
   @override
-  Future<void> putAtItem(NoteModel item, int index) async {
-    await box?.putAt(index, item);
-  }
-
-  @override
-  Future<void> removeItem(int key) async {
-    await box?.deleteAt(key);
+  Future<void> removeItem(String key) async {
+    await box?.delete(key);
   }
 
   @override
   List<NoteModel>? getValues() {
-    return box?.values.toList(); //.reversed.toList();
+    var items = box?.values.toList();
+    items?.sort((a, b) => a.created.microsecondsSinceEpoch
+        .compareTo(b.created.microsecondsSinceEpoch));
+    return items?.reversed.toList();
   }
 
   @override
@@ -33,7 +32,10 @@ class NoteCacheManager extends ICacheManager<NoteModel> {
     return box?.values
         .where((e) =>
             e.title.toLowerCase().contains(key.toLowerCase()) ||
-            e.body.toLowerCase().contains(key.toLowerCase()))
+            e.body.toLowerCase().contains(key.toLowerCase()) ||
+            e.category.category.locale
+                .toLowerCase()
+                .contains(key.toLowerCase()))
         .toList();
   }
 

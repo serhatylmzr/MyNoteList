@@ -1,11 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mynotelist/product/init/lang/language_extension.dart';
 import '../../../product/constants/app_constants.dart';
 import '../../../core/extensions/context_extension.dart';
+import '../../../product/widget/dialog/show_dialog_button.dart';
 import '../cubit/setting_cubit.dart';
 import '../viewmodel/setting_view_model.dart';
 import '../../../product/constants/image_constants.dart';
@@ -15,8 +18,10 @@ import '../../../product/init/lang/locale_keys.g.dart';
 part 'modules/app_logo_widget.dart';
 part 'modules/theme_switch.dart';
 part 'modules/language_dialog.dart';
-part 'modules/language_button.dart';
+part 'modules/privacy_dialog.dart';
+part 'modules/collaboration_dialog.dart';
 part 'modules/drawer_image_widget.dart';
+part 'modules/submodules/close_text_button.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({Key? key}) : super(key: key);
@@ -54,32 +59,13 @@ ListView _buildListView(BuildContext context, SettingViewModel _viewModel) {
       const Divider(),
       _buildLanguage(context, _viewModel),
       _buildTheme(context, _viewModel),
-      _buildHelp(context),
-      _buildCollobration(context),
-      _buildPrivacy(context),
+      _buildPrivacy(context, _viewModel),
+      _buildLicence(context, _viewModel),
+      _buildApplicationTour(context, _viewModel),
+      _buildCollaboration(context, _viewModel),
       const _DrawerImageWidget()
     ],
   );
-}
-
-ListTile _buildPrivacy(BuildContext context) {
-  return ListTile(
-    leading: const Icon(Icons.privacy_tip),
-    title: _buildTitle(context, LocaleKeys.profilePage_privacyPolicy_title),
-  );
-}
-
-ListTile _buildCollobration(BuildContext context) {
-  return ListTile(
-    leading: const Icon(Icons.arrow_right_alt),
-    title: _buildTitle(context, LocaleKeys.profilePage_collaboration_title),
-  );
-}
-
-ListTile _buildHelp(BuildContext context) {
-  return ListTile(
-      leading: const Icon(Icons.help_outline_rounded),
-      title: _buildTitle(context, LocaleKeys.profilePage_helpCenter_title));
 }
 
 ListTile _buildTheme(BuildContext context, SettingViewModel _viewModel) {
@@ -96,9 +82,57 @@ ListTile _buildLanguage(BuildContext context, SettingViewModel _viewModel) {
   return ListTile(
     leading: const Icon(Icons.language),
     title: _buildTitle(context, LocaleKeys.profilePage_language_title),
-    trailing: _LanguageButton(viewModel: _viewModel),
+    trailing: Padding(
+      padding: context.paddingRightNormal,
+      child: LocaleText(
+          text: context
+              .watch<SettingCubit>()
+              .state
+              .locale
+              ?.languageCode
+              .getLangFullName),
+    ),
+    onTap: () =>
+        buildShowDialog(context, _LanguageDialog(viewModel: _viewModel)),
     //trailing: ,
   );
+}
+
+ListTile _buildPrivacy(BuildContext context, SettingViewModel viewModel) {
+  return ListTile(
+      leading: const Icon(Icons.privacy_tip_outlined),
+      title: _buildTitle(context, LocaleKeys.profilePage_privacyPolicy_title),
+      onTap: () =>
+          buildShowDialog(context, _PrivacyDialog(viewModel: viewModel)));
+}
+
+ListTile _buildLicence(BuildContext context, SettingViewModel viewModel) {
+  return ListTile(
+    leading: const Icon(
+      Icons.info_outlined,
+    ),
+    title: _buildTitle(context, LocaleKeys.profilePage_licences_title),
+    onTap: () => showLicensePage(
+        context: context,
+        applicationName: ApplicationConstants.appTitle,
+        applicationVersion: ApplicationConstants.appVersion),
+  );
+}
+
+ListTile _buildApplicationTour(
+    BuildContext context, SettingViewModel viewModel) {
+  return ListTile(
+      leading: const Icon(Icons.arrow_right_alt_outlined),
+      title: _buildTitle(context, LocaleKeys.profilePage_applicationTour_title),
+      onTap: () => viewModel.navigateToOnboard());
+}
+
+ListTile _buildCollaboration(BuildContext context, SettingViewModel viewModel) {
+  return ListTile(
+      leading: const Icon(Icons.handshake_outlined),
+      title: _buildTitle(context, LocaleKeys.profilePage_collaboration_title),
+      onTap: () =>
+          buildShowDialog(context, _CollaborationDialog(viewModel: viewModel)));
 }
 
 LocaleText _buildTitle(BuildContext context, String title) =>

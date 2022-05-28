@@ -1,5 +1,6 @@
 class ApplicationConstants {
   static const appTitle = 'MyNoteList';
+  static const appVersion = '1.0.0+3';
   static const langAssetPath = 'assets/languages';
   static const fontFamily = 'Rubik';
 

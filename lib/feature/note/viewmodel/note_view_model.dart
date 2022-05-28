@@ -20,7 +20,7 @@ class NoteViewModel with BaseViewModel {
   final NoteThemeManager _noteThemeManager = NoteThemeManager.instance;
   final NoteCategoryManager _categoryManager = NoteCategoryManager.instance;
   NoteModel? note;
-  int? noteIndex;
+  String? noteKey;
   @override
   void setContext(BuildContext context) {
     this.context = context;
@@ -67,11 +67,15 @@ class NoteViewModel with BaseViewModel {
     if (setting?.arguments != null) {
       final arguments = setting?.arguments as List;
       final note = arguments[0] as NoteModel;
-      noteIndex = arguments[1] as int;
+      noteKey = note.noteId;
       titleTextController.text = note.title;
       contentTextController.text = note.body;
       selectedNoteTheme(note.noteTheme);
       noteCubit.changeSelectedCategory(note.category);
+    } else {
+      noteKey = 'note ' +
+          created.microsecond.toString() +
+          created.millisecond.toString();
     }
   }
 
@@ -93,21 +97,20 @@ class NoteViewModel with BaseViewModel {
 
 //Save Note
   void saveNote() {
-    noteIndex == null
-        ? noteCubit.addNote(noteModel)
-        : noteCubit.updateNote(noteModel, noteIndex!);
+    noteCubit.saveNote(noteModel);
     _clearText();
     _navigateToHome();
   }
 
   NoteModel get noteModel => NoteModel(
+        noteId: noteKey as String,
         title: titleTextController.text,
         body: contentTextController.text,
         noteTheme: noteCubit.state.noteTheme,
         category: noteCubit.state.category,
-        created: DateTime.now(),
+        created: created,
       );
-
+  DateTime get created => DateTime.now();
   //Cancel Note
   void cancelNote() {
     _navigateToHome();

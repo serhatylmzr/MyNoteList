@@ -5,7 +5,6 @@ class _AppLogoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double imageSize = 40;
     return Padding(
       padding: context.paddingSymmetricLowHorizontal,
       child: Card(
@@ -21,30 +20,39 @@ class _AppLogoWidget extends StatelessWidget {
                 context.spacer,
                 context.dynamicExpanded(
                   1,
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(
-                      ImageConstants.instance.pngPath.appLogo,
-                      fit: BoxFit.fill,
-                      width: imageSize,
-                      height: imageSize,
-                    ),
-                  ),
+                  buildLogo(),
                 ),
                 context.dynamicExpanded(
                   3,
-                  Text(
-                    ApplicationConstants.appTitle,
-                    style: context.textTheme.headline2
-                        ?.copyWith(fontWeight: FontWeight.w500),
-                    textAlign: TextAlign.center,
-                  ),
+                  _buildText(context),
                 ),
                 context.spacer,
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Text _buildText(BuildContext context) {
+    return Text(
+      ApplicationConstants.appTitle,
+      style: context.textTheme.headline2?.copyWith(fontWeight: FontWeight.w500),
+      textAlign: TextAlign.center,
+    );
+  }
+
+  ClipRRect buildLogo() {
+    const double imageSize = 40;
+    final BorderRadius borderRadius = BorderRadius.circular(10);
+    return ClipRRect(
+      borderRadius: borderRadius,
+      child: Image.asset(
+        ImageConstants.instance.pngPath.appLogo,
+        fit: BoxFit.fill,
+        width: imageSize,
+        height: imageSize,
       ),
     );
   }
